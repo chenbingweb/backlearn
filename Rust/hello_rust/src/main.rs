@@ -40,4 +40,35 @@ fn main() {
     let slice = &a[1..3];
     println!("slice: {:?}", slice);
     println!("slice.len(): {}", slice.len());
+    println!("add:{}", add(1,2));
+
+    let y = {
+        let a=1;
+        let b=2;
+        a+b
+    };
+    println!("y: {}", y);
+    let i = rloop();
+    println!("i: {}", i);
+
+    let num = 10;
+    match num {
+        10 => println!("num is 10"),
+        _ => println!("num is not 10"),
+    }
+}
+
+fn add(a: i32, b: i32) -> i32 {
+    a + b
+}
+
+fn rloop() -> i32 {
+    let mut i = 0;
+    loop {
+        println!("hello world");
+        i += 1;
+        if i > 5 {
+            break i;
+        }
+    }
 }
